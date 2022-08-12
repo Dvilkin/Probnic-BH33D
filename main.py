@@ -5,4 +5,3 @@ a = 20
 print('vetka')
 print('vetka')
 print('vetka')
-
