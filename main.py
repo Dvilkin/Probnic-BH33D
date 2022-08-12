@@ -2,4 +2,6 @@ print('hello world')
 print('hello world')
 print('hello world')
 print('vetka')
-a = 20
+korobka1 = 20
+korobka2 = 10
+korobka3 = 15
