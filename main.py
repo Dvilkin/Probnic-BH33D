@@ -1,5 +1,4 @@
 print('hello world')
 print('hello world')
-print('hello world')
+print('vetka')
 a = 20
-print ('vetka')
