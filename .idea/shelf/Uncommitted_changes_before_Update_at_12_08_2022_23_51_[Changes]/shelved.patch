@@ -1,0 +1,19 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>print('hello world')\r\nprint('hello world')\r\na = 20\r\na = 20\r\na = 20\r\na = 20\r\na = 20\r\nprint('vetka')\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision eb4b263af4f83de57457572647b3944250a52e0c)
++++ b/main.py	(date 1660337498391)
+@@ -1,8 +1,4 @@
+ print('hello world')
+ print('hello world')
+ a = 20
+-a = 20
+-a = 20
+-a = 20
+-a = 20
+ print('vetka')

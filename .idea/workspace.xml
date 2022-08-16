@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e9587f09-6693-4fcd-b734-bda5d45d0fef" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="main" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="HomeWork" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DFRhKN86LH4jVsEO319hJcNUjW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Zanatie_3" />
+        <item itemvalue="Python.Zanatie_3" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e9587f09-6693-4fcd-b734-bda5d45d0fef" name="Changes" comment="" />
+      <created>1660292963794</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660292963794</updated>
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1660294667264</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660294667264</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add print">
+      <created>1660295670019</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660295670019</updated>
+    </task>
+    <task id="LOCAL-00003" summary="print v pycharm">
+      <created>1660297307818</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660297307818</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Revert &quot;add print&quot;&#10;&#10;This reverts commit dad637d6">
+      <created>1660298299270</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660298299270</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Revert &quot;add print&quot;&#10;&#10;This reverts commit dad637d6">
+      <created>1660298423758</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660298423758</updated>
+    </task>
+    <task id="LOCAL-00006" summary="punktyacia">
+      <created>1660299060376</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660299060376</updated>
+    </task>
+    <task id="LOCAL-00007" summary="print 3">
+      <created>1660334331195</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660334331195</updated>
+    </task>
+    <task id="LOCAL-00008" summary="a = 20 *4">
+      <created>1660334558103</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1660334558103</updated>
+    </task>
+    <task id="LOCAL-00009" summary="finish">
+      <created>1660337023095</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1660337023095</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add print">
+      <created>1660337091583</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1660337091583</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add print -">
+      <created>1660337123276</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660337123276</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add print +1">
+      <created>1660337762794</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1660337762794</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add 3 korobki">
+      <created>1660338047676</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660338047692</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Initial commit">
+      <created>1660568087185</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660568087185</updated>
+    </task>
+    <task id="LOCAL-00015" summary="del readmi">
+      <created>1660568409659</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1660568409659</updated>
+    </task>
+    <task id="LOCAL-00016" summary="MERGE VETKA1">
+      <created>1660573734253</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1660573734253</updated>
+    </task>
+    <task id="LOCAL-00017" summary="что то изменил)">
+      <created>1660677092830</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1660677092830</updated>
+    </task>
+    <task id="LOCAL-00018" summary="initial commit">
+      <created>1660677175941</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1660677175941</updated>
+    </task>
+    <task id="LOCAL-00019" summary="initial commit">
+      <created>1660677340047</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1660677340047</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Revert &quot;add print&quot;&#10;&#10;This reverts commit dad637d6">
+      <created>1660678832509</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1660678832509</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="print v pycharm" />
+    <MESSAGE value="punktyacia" />
+    <MESSAGE value="print 3" />
+    <MESSAGE value="a = 20 *4" />
+    <MESSAGE value="finish" />
+    <MESSAGE value="add print" />
+    <MESSAGE value="add print -" />
+    <MESSAGE value="add print +1" />
+    <MESSAGE value="add 3 korobki" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="del readmi" />
+    <MESSAGE value="MERGE VETKA1" />
+    <MESSAGE value="что то изменил)" />
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="Revert &quot;add print&quot;&#10;&#10;This reverts commit dad637d6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;add print&quot;&#10;&#10;This reverts commit dad637d6" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+</project>
