@@ -5,5 +5,5 @@
 n: int = int(input('ENTER n:'))
 biblioteka = {
     n: {'NAME': input('ENTER Name:'),
-        'EMAIL': input('ENTER email:')} for n in range(1, n+1)}
+        'EMAIL': input('ENTER email:')} for n in range(1, n + 1)}
 print(biblioteka)
