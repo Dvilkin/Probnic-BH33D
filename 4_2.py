@@ -1,7 +1,7 @@
 # Без использования collections, написать программу, которая будет создавать словарь
 # для подсчитывания количества вхождений каждой буквы в текст введенный с клавиатуры
 
-stroka: str = str(input('Enter text:'))
+stroka = input('Enter text:')
 dlina = len(stroka)
 print('Kolichestvo vvedenix simvolov:', len(stroka))
 list_vse = {
