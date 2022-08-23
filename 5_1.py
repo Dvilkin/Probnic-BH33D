@@ -7,6 +7,7 @@ chisla = 0
 kol_chisel = 0
 while kol_chisel <= n:
     if k % m == 0:
-        print(round(k::m))
+        print(k)
+        kol_chisel +=1
     k += 1
-    if
+
