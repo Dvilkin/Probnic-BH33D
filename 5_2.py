@@ -17,3 +17,5 @@ elif deistvie == "**":
     print(cislo1 ** cislo2)
 elif deistvie == "//":
     print(cislo1 // cislo2)
+else:
+    print("Error")
