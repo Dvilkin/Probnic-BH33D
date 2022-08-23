@@ -4,7 +4,7 @@ n: int = int(input('Enter cisla do:'))
 predel = 0
 cislo = 0
 stroka = 0
-while predel < n-1:
+while predel < n - 1:
     predel += 2
     stroka += 1
     cislo += 2
@@ -12,3 +12,5 @@ while predel < n-1:
         print(cislo, end=" ")
     else:
         print(cislo, end="\n")
+else:
+    print('Error')
