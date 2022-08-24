@@ -18,5 +18,5 @@
 n = int(input("Enter chislo:"))
 s = 0
 for i in range(n):
-    s+= int(input())
+    s += 1
 print(s/n)
