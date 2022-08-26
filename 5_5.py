@@ -8,16 +8,17 @@
 from django.core.paginator import Paginator
 objects = ['john', 'paul', 'george', 'ringo']
 p = Paginator(objects, 1)
-for n in range(1, n):
-    if input() == '>':
-        print(p.object_list(n))
-        n += 1
-    elif input() == '<':
-        print(p.object_list(n))
-        n -= 1
+# for n in range(1, 10):
+#     if input() == '>':
+#         print(p.object_list(n))
+#         n += 1
+#     elif input() == '<':
+#         print(p.object_list(n))
+#         n -= 1
 
 
 p1 = p.page(2)
 print(p1.object_list)
+
 print(p.count)
-print(p1)
+print(p.page(2))
