@@ -15,8 +15,8 @@
 
 #Составить программу дял вычисления среднего арифметического N произвольно вводимых чисел
 
-n = int(input("Enter chislo:"))
-s = 0
-for i in range(n):
-    s += 1
-print(s/n)
+# n = int(input("Enter chislo:"))
+# s = 0
+# for i in range(n):
+#     s += 1
+# print(s/n)
