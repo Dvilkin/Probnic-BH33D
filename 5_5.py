@@ -16,7 +16,6 @@ p = Paginator(objects, 1)
 #         print(p.object_list(n))
 #         n -= 1
 
-
 p1 = p.page(2)
 print(p1.object_list)
 
