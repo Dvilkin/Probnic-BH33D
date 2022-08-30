@@ -2,5 +2,5 @@
 # образом, чтобы остались только строки, использование дополнительного списка незаконно
 
 spisok = [1, 2, 3, 'Leto', [89, 90, 91, 92], 'osen blizko', True, None]
-rez = list(filter(lambda x: type(x) == str, spisok))
-print(rez)
+spisok = list(filter(lambda x: type(x) == str, spisok))
+print(spisok)
