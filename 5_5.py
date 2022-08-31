@@ -5,19 +5,20 @@
 # то следующий это первый, а если находится на первом элементе, то предыдущий это последний,
 # чтобы пользователь мог прокручивать список по кругу в любом направлении
 
-from django.core.paginator import Paginator
 objects = ['john', 'paul', 'george', 'ringo']
-p = Paginator(objects, 1)
-# for n in range(1, 10):
-#     if input() == '>':
-#         print(p.object_list(n))
-#         n += 1
-#     elif input() == '<':
-#         print(p.object_list(n))
-#         n -= 1
-
-p1 = p.page(2)
-print(p1.object_list)
-
-print(p.count)
-print(p.page(2))
+count_list = 0
+print('Enter next > back < current selection:', objects[count_list])
+while 1:
+    zapros = input()
+    if zapros == '>':
+        count_list += 1
+        if zapros == len(objects):
+            zapros = 0
+        print('Enter next > back < current selection:', objects[count_list])
+        continue
+    elif zapros == '<':
+        if count_list == 0:
+            count_list = len(objects)
+        count_list -= 1
+        print('Enter next > back < current selection:', objects[count_list])
+        continue
