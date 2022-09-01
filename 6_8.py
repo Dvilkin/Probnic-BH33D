@@ -4,15 +4,17 @@
 slovar = {
     "Belarus": ['Minsk', 'Brest', 'Vitebsk', 'Gomel', 'Grodno', 'Mogilev', 1],
     "Russian Federation": ['Moscow', 'St. Petersburg', 'Sevastopol'],
-    'rm': 2
+    'Ukraine': ['Kyiv', 'Kharkiv', 'Odessa']
 }
 print(slovar.values())
 
 
-def get_key(slovar, value):
+def get_key(slovar, value):  # поиск по ключам и значениям
     for k, v in slovar.items():
-        if v == value:
-            return k
+        for i in v:  # отображает все значения каждого ключа по очереди
+            if i == value:  # сравнивает каждое значение с искомым
+                return k  # если находит выводит ключ
 
 
-print(get_key(slovar, ['Moscow', 'St. Petersburg', 'Sevastopol']))
+value = input(f'Enter gorod:')
+print(get_key(slovar, value))
