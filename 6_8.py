@@ -1,0 +1,9 @@
+# Дан словарь, ключ - Название страны, значение - список городов, на вход
+# поступает город, необходимо сказать из какой он страны
+
+slovar = {
+    "Belarus": ['Minsk', 'Brest', 'Vitebsk', 'Gomel', 'Grodno', 'Mogilev'],
+    "Russian Federation": ['Moscow', 'St. Petersburg', 'Sevastopol']
+
+}
+print(slovar.values())
