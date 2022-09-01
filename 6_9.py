@@ -17,7 +17,7 @@ slovar = {
         {'name': 'Sergey',
          'surname': 'Petrovic',
          'tel': 375298975060,
-         'email': None},
+         'email': ''},
     'id4':
         {'name': 'Petr',
          'surname': 'Afanasevic',
@@ -29,3 +29,15 @@ slovar = {
          'tel': 375336587121,
          'email': 'alex@gmail.com'}
 }
+print(slovar)
+
+
+def get_key(slovar, value):
+    for value_id in slovar.values():
+        for v in value_id.values():
+            if type(v) == type(value) or v == '':
+                print(f'Non email:{(list(value_id.values()))[0]}')
+    pass
+
+
+get_key(slovar, value=None)
