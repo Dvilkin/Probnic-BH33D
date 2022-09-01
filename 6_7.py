@@ -16,4 +16,4 @@ def foo(len_spiska):
             print(spisok_cisel[n], spisok_cisel[n - 1] + spisok_cisel[n + 1])
 
 
-foo(0)
+foo(input(f'Enter start:'))
