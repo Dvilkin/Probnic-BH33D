@@ -2,13 +2,13 @@
 # указанное число, пример: [1,2,3,4,5,6,7] N=3 ответ: [5,6,7,1,2,3,4]
 
 spisik_cisel = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-smescenie: int = int(input("Enter smescenie ot 1 do 8:"))
 
 
 def foo(smescenie):
-    spisik = spisik_cisel[-smescenie:] + spisik_cisel[:-smescenie]
-    print(spisik)
-    return spisik
+    spisok = spisik_cisel[-smescenie:] + spisik_cisel[:-smescenie]
+    return spisok
 
 
-foo(smescenie)
+spisok = foo(
+    int(input(f'Enter smescenie ot 1 do 8:')))  # Вводим смежение и присваиваем переменной результат работы функции
+print(spisok)
