@@ -36,7 +36,7 @@ def get_key(slovar, value):
     for value_id in slovar.values():
         for v in value_id.values():
             if type(v) == type(value) or v == '':
-                print(f'Non email:{(list(value_id.values()))[0]}')
+                print(f'No email:{(list(value_id.values()))[0]}')
     pass
 
 
