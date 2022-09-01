@@ -2,7 +2,7 @@
 # поступает город, необходимо сказать из какой он страны
 
 slovar = {
-    "Belarus": ['Minsk', 'Brest', 'Vitebsk', 'Gomel', 'Grodno', 'Mogilev', 1],
+    "Belarus": ['Minsk', 'Brest', 'Vitebsk', 'Gomel', 'Grodno', 'Mogilev'],
     "Russian Federation": ['Moscow', 'St. Petersburg', 'Sevastopol'],
     'Ukraine': ['Kyiv', 'Kharkiv', 'Odessa']
 }
