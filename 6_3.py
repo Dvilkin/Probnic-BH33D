@@ -3,5 +3,12 @@
 
 spisik_cisel = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 smescenie: int = int(input("Enter smescenie ot 1 do 8:"))
-spisik_cisel = spisik_cisel[-smescenie:] + spisik_cisel[:-smescenie]
-print(spisik_cisel)
+
+
+def foo(smescenie):
+    spisik = spisik_cisel[-smescenie:] + spisik_cisel[:-smescenie]
+    print(spisik)
+    return spisik
+
+
+foo(smescenie)
