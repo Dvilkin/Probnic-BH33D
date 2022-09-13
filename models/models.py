@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import Column, SmallInteger, VARCHAR, ForeignKey, TIMESTAMP, DECIMAL
+from sqlalchemy import Column, SmallInteger, VARCHAR, ForeignKey, TIMESTAMP, DECIMAL, CHAR, Boolean
 from sqlalchemy.orm import declarative_base
 
 
@@ -19,10 +19,10 @@ class Category(Base):
 class Product(Base):
     __tablenam__: str = 'products'
 
-    article = Column(CHAR(), primary_key=True)
+    article = Column(CHAR(6), primary_key=True)
     name = Column(VARCHAR(), nullable=False)
     price = Column(DECIMAL(8, 2), nullable=False, default=0)
-    date_create = Column(TIMESTAMP, default=datatime.utcnow())
+    date_create = Column(TIMESTAMP, default=datetime.utcnow())
     descr = Column(VARCHAR(140))
 
 
@@ -47,5 +47,5 @@ class OrderItem(Base):
     _tablename__: str = 'orders_items'
 
     id = Column(SmallInteger, Primary_key=True)
-    product_article = Column(Char(6), ForeignKey('products.article', ondelete='NOACTION'), nullable=False)
+    product_article = Column(CHAR(6), ForeignKey('products.article', ondelete='NO ACTION'), nullable=False)
     order_id = Column(ForeignKey('orders.id', ondelete='CASCADE'), nullable=False)
