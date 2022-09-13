@@ -48,4 +48,4 @@ class OrderItem(Base):
 
     id = Column(SmallInteger, Primary_key=True)
     product_article = Column(Char(6), ForeignKey('products.article', ondelete='NOACTION'), nullable=False)
-    order_id = Column(ForeignKey('orders.id', ondelete='CASCADE'))
+    order_id = Column(ForeignKey('orders.id', ondelete='CASCADE'), nullable=False)
