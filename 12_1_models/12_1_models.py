@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import Column, SmallInteger, VARCHAR, ForeignKey, TIMESTAMP, DECIMAL, CHAR, Boolean
+from sqlalchemy import Column, SmallInteger, VARCHAR, ForeignKey, TIMESTAMP, DECIMAL, Boolean
 from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
@@ -13,6 +13,7 @@ class Category(Base):
     parent_id = Column(SmallInteger, ForeignKey('categories.id', ondelete='CASCADE'))
     is_published = Column(Boolean, default=False, nullable=False)
     name = Column(VARCHAR(), nullable=False)
+
 
 class Product(Base):
     __tablename__: str = 'products'
@@ -66,13 +67,13 @@ class Order(Base):
     user_id = Column(SmallInteger, primary_key=False)
     date_create = Column(TIMESTAMP, default=datetime.utcnow())
     status_id = Column(SmallInteger, ForeignKey('statuses.id', ondelete='NO ACTION'), nullable=False)
-    invoice_id = Column(ForeignKey('invoices.id', ondelete='NO ACTIONS'), nullable=False)4
+    invoice_id = Column(SmallInteger, ForeignKey('invoices.id', ondelete='NO ACTIONS'), nullable=False)
 
 
-class Order_item(Base):
+class OrderItem(Base):
     __tablename__: str = 'order_items'
 
     id = Column(SmallInteger, Primary_key=True)
     order_id = Column(SmallInteger, ForeignKey('order_items.id', ondelete='NO ACTION'), nullable=False)
     product_id = Column(SmallInteger, ForeignKey('products.id', ondelete='NO ACTION'), nullable=False)
-    total = Column(DECIMAL(8,2), nullable=False)
+    total = Column(DECIMAL(8, 2), nullable=False)
