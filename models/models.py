@@ -3,13 +3,11 @@ from datetime import datetime
 from sqlalchemy import Column, SmallInteger, VARCHAR, ForeignKey, TIMESTAMP, DECIMAL, CHAR, Boolean
 from sqlalchemy.orm import declarative_base
 
-
 Base = declarative_base()
 
 
 class Category(Base):
     __tablename__: str = 'categories'
-
 
     id = Column(SmallInteger, primary_key=True)
     name = Column(VARCHAR(20), nullable=False, unique=True)
@@ -35,7 +33,7 @@ class User(Base):
 
 
 class Order(Base):
-    _tablename__: str = 'orders'
+    __tablename__: str = 'orders'
 
     id = Column(SmallInteger, primary_key=True)
     user_id = Column(SmallInteger, ForeignKey('user.id', ondelete='CASCADE'), nullable=False)
@@ -44,7 +42,7 @@ class Order(Base):
 
 
 class OrderItem(Base):
-    _tablename__: str = 'orders_items'
+    __tablename__: str = 'orders_items'
 
     id = Column(SmallInteger, Primary_key=True)
     product_article = Column(CHAR(6), ForeignKey('products.article', ondelete='NO ACTION'), nullable=False)
