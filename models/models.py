@@ -15,7 +15,7 @@ class Category(Base):
 
 
 class Product(Base):
-    __tablenam__: str = 'products'
+    __tablename__: str = 'products'
 
     article = Column(CHAR(6), primary_key=True)
     name = Column(VARCHAR(), nullable=False)
