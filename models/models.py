@@ -22,6 +22,7 @@ class Product(Base):
     price = Column(DECIMAL(8, 2), nullable=False, default=0)
     date_create = Column(TIMESTAMP, default=datetime.utcnow())
     descr = Column(VARCHAR(140))
+    category_id = Column(SmallInteger, ForeignKey('categories.id', ondelete='CASCADE'), nullable=False)
 
 
 class User(Base):

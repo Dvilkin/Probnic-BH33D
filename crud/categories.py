@@ -1,10 +1,10 @@
-from typing import Optional, List
+from typing import Optional, List, Tuple
 
 from sqlalchemy.orm import Session
 from sqlalchemy import select, update, delete
 from sqlalchemy.exc import IntegrityError
 
-from models import Category, create_sync_session
+from models import Category, Product, create_sync_session
 
 
 class CRUDCategory:
@@ -85,3 +85,19 @@ def update(
             return True
     else:
         return False
+
+@staticmethod
+@create_sync_session
+def join(category_id: int = None, session: Session = None) -> List[Tuple[Category, Product]]:
+    if category_id:
+        response = session.execute(
+            select(Category, Product)
+            .join(Product, Category.id == Product.category_id)
+            .where(Category.id == category_id)
+        )
+    else:
+        response = session.execute(
+            select(Category, Product)
+            .join(Product, Category.id == Product.category_id)
+        )
+    return response.all()
