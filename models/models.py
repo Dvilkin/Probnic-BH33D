@@ -18,7 +18,7 @@ class Product(Base):
     __tablename__: str = 'products'
 
     article = Column(CHAR(6), primary_key=True)
-    name = Column(VARCHAR(), nullable=False)
+    name = Column(VARCHAR(20), nullable=False)
     price = Column(DECIMAL(8, 2), nullable=False, default=0)
     date_create = Column(TIMESTAMP, default=datetime.utcnow())
     descr = Column(VARCHAR(140))
@@ -28,7 +28,7 @@ class Product(Base):
 class User(Base):
     __tablename__: str = 'users'
 
-    id = Column(CHAR(), primary_key=True)
+    id = Column(SmallInteger, primary_key=True)
     name = Column(VARCHAR(36), nullable=False)
     email = Column(VARCHAR(36), nullable=False, unique=True)
 
@@ -37,7 +37,7 @@ class Order(Base):
     __tablename__: str = 'orders'
 
     id = Column(SmallInteger, primary_key=True)
-    user_id = Column(SmallInteger, ForeignKey('user.id', ondelete='CASCADE'), nullable=False)
+    user_id = Column(SmallInteger, ForeignKey('users.id', ondelete='CASCADE'), nullable=False)
     is_paid = Column(Boolean, default=False, nullable=False)
     data_create = Column(TIMESTAMP, default=datetime.utcnow(), nullable=False)
 
@@ -45,6 +45,6 @@ class Order(Base):
 class OrderItem(Base):
     __tablename__: str = 'orders_items'
 
-    id = Column(SmallInteger, Primary_key=True)
+    id = Column(SmallInteger, primary_key=True)
     product_article = Column(CHAR(6), ForeignKey('products.article', ondelete='NO ACTION'), nullable=False)
     order_id = Column(ForeignKey('orders.id', ondelete='CASCADE'), nullable=False)
