@@ -1,7 +1,7 @@
 from typing import List
 
 from .models import Base, Category, Product, Order, OrderItem, User
-from .engine import DATABASE_URL, SYNC_ENGINE, create_sync_session
+from .engine import DATABASE_URL, SYNC_ENGINE, create_sync_session, create_async_session
 
 __all__: List[str] = [
     'Base',
@@ -12,5 +12,6 @@ __all__: List[str] = [
     'User',
     'DATABASE_URL',
     'SYNC_ENGINE',
-    'create_sync_session'
+    'create_sync_session',
+    'create_async_session'
 ]
