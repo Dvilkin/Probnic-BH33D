@@ -16,8 +16,10 @@ def create_sync_session(func):
 
     return wrapper
 
+
 def create_async_session(func):
     async def wrapper(**kwargs):
         async with AsyncSession(binds=ASYNC_ENGINE) as session:
             return await func(**kwargs, session=session)
+
     return wrapper
