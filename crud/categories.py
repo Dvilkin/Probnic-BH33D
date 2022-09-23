@@ -89,13 +89,13 @@ class CRUDCategory:
     @create_async_session
     async def join(category_id: int = None, session: AsyncSession = None) -> List[Tuple[Category, Product]]:
         if category_id:
-            response = session.execute(
+            response = await session.execute(
                 select(Category, Product)
                 .join(Product, Category.id == Product.category_id)
                 .where(Category.id == category_id)
             )
         else:
-            response = session.execute(
+            response = await session.execute(
                 select(Category, Product)
                 .join(Product, Category.id == Product.category_id)
             )
@@ -185,10 +185,14 @@ class CRUDProduct:
     @create_async_session
     async def join(product_id: int = None, session: AsyncSession = None) -> List[Tuple[Category, Product]]:
         if product_id:
-            response = session.execute(
-                select(Product, Category).join(Category, Product.id == Category.product_id)
+            response = await session.execute(
+                select(Product, Category)
+                .join(Category, Product.id == Category.product_id)
                 .where(Product.id == product_id)
             )
         else:
-            response = session.execute(Product, Category).join(Category, Product.id == Category.product_id)
+            response = await session.execute(
+                select(Product, Category)
+                .join(Category, Product.id == Category.product_id)
+            )
         return response.all()
