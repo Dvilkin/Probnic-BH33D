@@ -4,7 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, update, delete
 from sqlalchemy.exc import IntegrityError
 
-from models import Category, Product, create_async_session
+from models import Category, Product, User, Order, OrderItem, create_async_session
 
 
 class CRUDCategory:
@@ -40,7 +40,7 @@ class CRUDCategory:
         if parent_id:
             categories = await session.execute(
                 select(Category)
-                .whate(Category.parent_id == parent_id)
+                .where(Category.parent_id == parent_id)
                 .order_by(Category.id)
             )
         else:
@@ -126,9 +126,9 @@ class CRUDProduct:
 
     @staticmethod
     @create_async_session
-    async def get(category_id: int, session: AsyncSession = None) -> Product | None:
+    async def get(product_id: int, session: AsyncSession = None) -> Product | None:
         product = await session.execute(
-            select(Product).where(Product.id == category_id)
+            select(Product).where(Product.id == product_id)
         )
         category = product.first()
         if category:
@@ -136,10 +136,10 @@ class CRUDProduct:
 
     @staticmethod
     @create_async_session
-    async def all(parent_id: int = None, session: AsyncSession = None) -> List[Product]:
-        if parent_id:
+    async def all(product_id: int = None, session: AsyncSession = None) -> List[Product]:
+        if product_id:
             products = await session.execute(
-                select(Product).where(Product.id == parent_id).order_by(Product.id)
+                select(Product).where(Product.id == product_id).order_by(Product.id)
             )
         else:
             products = await session.execute(
@@ -196,3 +196,190 @@ class CRUDProduct:
                 .join(Category, Product.id == Category.product_id)
             )
         return response.all()
+
+
+class CRUDUser:
+    @staticmethod
+    @create_async_session
+    async def add(name: str, email: str, session: AsyncSession = None) -> User | None:
+        user = User(
+            name=name,
+            email=email
+        )
+        session.add(user)
+        try:
+            await session.commit()
+        except IntegrityError:
+            pass
+        else:
+            await session.refresh(user)
+            return user[0]
+
+    @staticmethod
+    @create_async_session
+    async def get(user_id: int, session: AsyncSession = None) -> User | None:
+        user = await session.execute(
+            select(User).where(User.id == user_id)
+        )
+        user = user.first()
+        if user:
+            return user[0]
+
+    @staticmethod
+    @create_async_session
+    async def all(user_id: int = None, session: AsyncSession = None) -> List[User]:
+        if user_id:
+            users = await session.execute(
+                select(User)
+                .where(User.user_id == user_id)
+                .order_by(User.id)
+            )
+        else:
+            users = await session.execute(
+                select(User)
+                .order_by(User.id)
+            )
+        return [user[0] for user in users]
+
+    @staticmethod
+    @create_async_session
+    async def delete(user_id: int, session: AsyncSession = None) -> None:
+        await session.execute(
+            delete(User)
+            .where(User.id == user_id)
+        )
+        await session.commit()
+
+    @staticmethod
+    @create_async_session
+    async def update(user_id: int, name: str = None, email: str = None, session: AsyncSession = None) -> bool:
+        if name or email:
+            await session.execute(
+                update(User)
+                .values(
+                    name=name if name else User.name,
+                    email=email if email else User.email
+                )
+                .where(User.id == user_id)
+            )
+            try:
+                await session.commit()
+            except IntegrityError:
+                return False
+            else:
+                return True
+        else:
+            return False
+
+
+class CRUDOrder:
+    @staticmethod
+    @create_async_session
+    async def add(user_id: int, is_paid: bool = None, data_create: any = None, session: AsyncSession = None
+                  ) -> Order | None:
+        order = Order(
+            user_id=user_id,
+            is_paid=is_paid,
+            data_create=data_create
+        )
+        session.add(order)
+        try:
+            await session.commit()
+        except IntegrityError:
+            pass
+        else:
+            await session.refresh(order)
+            return order[0]
+
+    @staticmethod
+    @create_async_session
+    async def get(order_id: int, session: AsyncSession = None) -> Order | None:
+        order = await session.execute(
+            select(Order).where(Order.id == order_id)
+        )
+        order = order.first()
+        if order:
+            return order[0]
+
+    @staticmethod
+    @create_async_session
+    async def all(user_id: int = None, session: AsyncSession = None) -> List[Order]:
+        if user_id:
+            orders = await session.execute(
+                select(Order)
+                .where(Order.user_id == user_id)
+                .order_by(Order.id)
+            )
+        else:
+            orders = await session.execute(
+                select(Order)
+                .order_by(Order.id)
+            )
+        return [order[0] for order in orders]
+
+    @staticmethod
+    @create_async_session
+    async def delete(order_id: int, session: AsyncSession = None) -> None:
+        await session.execute(
+            delete(Order)
+            .where(Order.id == order_id)
+        )
+        await session.commit()
+
+    @staticmethod
+    @create_async_session
+    async def update(
+            order_id: int,
+            user_id: int,
+            is_paid: bool,
+            data_create: any,
+            session: AsyncSession = None
+    ) -> Order | None:
+        order = Order(
+            order_id=order_id,
+            user_id=user_id,
+            is_paid=is_paid,
+            data_create=data_create
+        )
+        session.add(order)
+        try:
+            await session.commit()
+        except IntegrityError:
+            pass
+        else:
+            await session.refresh(order)
+            return order[0]
+
+    @staticmethod
+    @create_async_session
+    async def join(order_id: int = None, session: AsyncSession = None) -> List[Tuple[Order, User]]:
+        if order_id:
+            response = await session.execute(
+                select(Order, User)
+                .join(User, Order.id == User.order_id)
+                .where(Order.id == order_id)
+            )
+        else:
+            response = await session.execute(
+                select(Order, User)
+                .join(User, Order.id == User.order_id)
+            )
+        return response.all()
+
+
+class CRUDOrderItem:
+    @staticmethod
+    @create_async_session
+    async def add(product_article: int = None, order_id: int = None, session: AsyncSession = None) -> OrderItem | None:
+        orderitem = OrderItem(
+            product_article=product_article,
+            order_id=order_id
+        )
+        session.add(orderitem)
+        try:
+            await session.commit()
+        except IntegrityError:
+            pass
+        else:
+            await session.refresh(orderitem)
+            return orderitem[0]
